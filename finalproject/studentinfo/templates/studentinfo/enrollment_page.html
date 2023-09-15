@@ -1,0 +1,56 @@
+{% extends 'studentinfo/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid text-center text-white paddingclass">
+    <h1>Enrollment for {{ studentInfo.firstname }} {{ studentInfo.lastname }} </h1>
+</div>
+<hr/>
+<br/><br/>
+<div class="container-fluid">
+    <div class = "row justify-content-md-center">
+        <div class = "col-lg-auto text-center">
+        <form method = 'POST' action = "{% url 'enrollment_page' studentInfo.studentid %}">
+            {% csrf_token %}     
+            <div class="input-group">
+                <select name = "course.courseid" class="filter-selectbox">
+                <option selected>Choose a course...</option>
+                  {% for course in courseInfo %}  
+                  <option value="{{course.courseid}}" type="submit">{{course.coursetitle}} (00{{course.coursesection}})</option></a>
+                  {% endfor %}  
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" value="Submit">Submit</button>
+                </div>
+            </div>
+            </form>
+        </div>    
+    </div>
+    <br/><br/>
+    <div class = "row justify-content-md-center">
+    <div class ="col-lg-auto text-center">
+        <h3>Name: {{ studentInfo.firstname }} {{ studentInfo.lastname }}</h3>
+        <h3>Major: {{ studentInfo.studentmajor }}</h3>
+        <h3>Year: {{ studentInfo.studentyear }}</h3>
+        <h3>GPA: {{ studentInfo.gpa }}</h3>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-auto text-center">
+        <table class="table table-hover">
+            <thead class="bg-dark text-white">
+                <th>Enrolled Courses</th>
+            </thead>
+            {% for row in enrollmentInfo %}
+            <tr>
+                <td>{{ row.courseid.coursetitle }} (00{{ row.courseid.coursesection }})</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+</div>
+<div class="container-fluid fixed-bottom">
+    <h5><a href = "{% url 'enrollment' %}">Return to Enrollment Home</a></h5>
+</div>
+
+{% endblock %}

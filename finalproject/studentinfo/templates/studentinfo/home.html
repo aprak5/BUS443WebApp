@@ -1,0 +1,19 @@
+{% extends 'studentinfo/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid text-center text-white paddingclass">
+    <h1>Welcome!</h1>
+</div>
+<hr/>
+<br/><br/>
+
+<h3>Number of enrolled students: {{ countStudents }}</h3><br/>
+<h3>Number of registered courses: {{ countCourses }}</h3><br/>
+<h3>Average GPA: {{ averageGPA }}</h3><br/>
+<h3>Number of Freshmen: {{ countFreshmen }}</h3><br/>
+<h3>Number of Sophomores: {{ countSophomores }}</h3><br/>
+<h3>Number of Juniors: {{ countJuniors }}</h3><br/>
+<h3>Number of Seniors: {{ countSeniors }}</h3><br/>
+
+{% endblock %}
