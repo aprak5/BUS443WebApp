@@ -2,7 +2,9 @@
 
 ## Description
 
-As a part of the final project for the course, a web application was made as a small-scale enrollment management system. 
+As a part of the final project for the course, a web application was made as a small-scale enrollment management system. This application could be something a department course scheduler or admin uses to manage courses enrollment between students and/or teachers in the department. The application includes an admin management page along with the home, login, student info, course info, and enrollment info pages. All pages except the login page is protected, so valid user credentials are required to view the other pages. A brief overview of the application architecture can be found below.
+
+[](https://github.com/aprak5/BUS443WebApp/images/bus44projectarch.jpg)
 
 ## Prerequisites
 
@@ -21,6 +23,6 @@ To run the web application, make sure the following prerequisites have been met:
 To run the web application:
 
 - Run using the command `python finalproject/manage.py runserver`
-- Access the app on a web browser by typing `http://127.0.0.1/login`
+- Access the app on a web browser by typing `http://127.0.0.1:8000/login`
 - Log into the app using the credentials of the user made in the createsuperuser command
 - To exit, run the command `Deactivate`
