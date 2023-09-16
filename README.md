@@ -4,7 +4,7 @@
 
 As a part of the final project for the course, a web application was made as a small-scale enrollment management system. This application could be something a department course scheduler or admin uses to manage courses enrollment between students and/or teachers in the department. The application includes an admin management page along with the home, login, student info, course info, and enrollment info pages. All pages except the login page is protected, so valid user credentials are required to view the other pages. A brief overview of the application architecture can be found below.
 
-![](https://github.com/aprak5/BUS443WebApp/blob/main/images/bus44projectarch.jpg?raw=true)
+![](https://github.com/aprak5/BUS443WebApp/blob/main/images/bus443projectarch.jpg?raw=true)
 
 ## Prerequisites
 
