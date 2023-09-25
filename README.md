@@ -1,4 +1,4 @@
-# BUS 443 (Web Development for Business) Final Project
+# BUS 443 (Web Development for Business) Final Project - Lightweight Course Management System (CMS) Web Application
 
 ## Description
 
